@@ -15,15 +15,16 @@ import { ProfileMenu } from "../components/auth/ProfileMenu";
 import { UserSearch } from "../components/user/UserSearch";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import NavItem from "../components/shared/NavItem";
+import { Logo } from "../components/shared/Logo";
 import { FiGrid, FiMessageCircle, FiSettings, FiUser, FiUsers } from "react-icons/fi";
 
 const links = [
-  { href: "/admin", label: "Dashboard", icon: FiGrid },
+/*   { href: "/admin", label: "Dashboard", icon: FiGrid },
   { href: "/admin/users", label: "Users", icon: FiUsers },
-  { href: "/admin/profile", label: "Profile", icon: FiUser },
-  { href: "/admin/posts", label: "Posts", icon: FiMessageCircle },
+  { href: "/admin/profile", label: "Profile", icon: FiUser }, */
+  { href: "/admin/database", label: "Dados CNPJ", icon: FiMessageCircle },
   /* { href: "/admin/websocket", label: "Tasks", icon: FiClipboard }, */
-  { href: "/404", label: "404 Page", icon: FiSettings }
+  /* { href: "/404", label: "404 Page", icon: FiSettings } */
 ];
 
 function AdminLayout() {
@@ -32,7 +33,7 @@ function AdminLayout() {
       <AppShellSidebar>
         <AppShellSidebarHeader>
           <Stack spacing={4} mb='5'>
-            <Button
+            {/* <Button
               as={NavLink}
               justifyContent="left"
               leftIcon={<ArrowBackIcon />}
@@ -40,7 +41,9 @@ function AdminLayout() {
               variant="ghost"
             >
               Home Page
-            </Button>
+            </Button> */}
+            {/* <Logo /> */}
+            <img src="/dataleads.png" alt="logo" />
           </Stack>
         </AppShellSidebarHeader>
         <AppShellSidebarBody>

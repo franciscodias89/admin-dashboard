@@ -41,7 +41,7 @@ function ProfileMenu() {
 
   return (
     <Stack>
-      <Box px={4} mb='8' border={'1px solid gray'} borderRadius='2xl'>
+      {/* <Box px={4} mb='8' border={'1px solid gray'} borderRadius='2xl'> */}
         <Flex alignItems={'center'}>
           <Menu placement="bottom-end" closeOnSelect closeOnBlur>
             <MenuButton
@@ -54,19 +54,19 @@ function ProfileMenu() {
               <ProfileAvatar mr="3" avatarSize="sm" url={profile?.avatarUrl} avatarName={truncate(user?.email!)} />
             </MenuButton>
             <MenuList>
-              <MenuItem onClick={handleSignOut}>Sign out</MenuItem>
+              <MenuItem onClick={handleSignOut}>Sair</MenuItem>
             </MenuList>
           </Menu>
-          <Box>
+         {/* <Box>
             <Text fontSize="sm" fontWeight="medium">
               {profile?.username ? profile.username : ''}
             </Text>
             <Text color="muted" fontSize="xs" fontWeight="normal">
               {profile?.authorEmail}
             </Text>
-          </Box>
+          {/* </Box> */}
         </Flex>
-      </Box>
+      {/*</Box>*/}
     </Stack>
   );
 }

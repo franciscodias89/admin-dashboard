@@ -58,10 +58,10 @@ const Signin = () => {
     }
 
     const { handleSubmit, register, formState: { errors, isValid } } = useForm<FormValues>({
-        defaultValues: {
+       /*  defaultValues: {
             email: "janedane@gmail.com",
             password: "123456"
-        }
+        } */
     });
 
     const { register: register2, formState: { errors: errors2, isValid: isValid2 }, handleSubmit: handleSubmit2 } = useForm<FormValues>({
@@ -157,14 +157,14 @@ const Signin = () => {
             <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
                 <Stack spacing="8">
                     <Stack spacing="6">
-                        <Logo />
+                    <img src="/dataleads.png" alt="logo" />
                         <Stack spacing={{ base: '2', md: '3' }} textAlign="center">
-                            <Heading fontSize={'4xl'}>{!authButtonState ? 'Register a new account' : 'Sign in to your account'}</Heading>
+                            <Heading fontSize={'4xl'}>{!authButtonState ? 'Register a new account' : ''}</Heading>
                             <HStack spacing="1" justify="center">
-                                <Text color="muted">{authButtonState ? 'Don\'t have an account?' : 'Already a User?'}</Text>
-                                <Button onClick={() => setAuthButtonState(!authButtonState)} variant="link" colorScheme="blue">
+                                {/* <Text color="muted">{authButtonState ? 'Don\'t have an account?' : 'Already a User?'}</Text> */}
+                              {/*   <Button onClick={() => setAuthButtonState(!authButtonState)} variant="link" colorScheme="blue">
                                     {authButtonState ? 'Sign up' : 'Log in'}
-                                </Button>
+                                </Button> */}
                             </HStack>
                         </Stack>
                     </Stack>
@@ -178,7 +178,7 @@ const Signin = () => {
                         <Tabs align='center' isLazy  >
                             <TabList mb='1em'>
                                 <Tab>Username/Password</Tab>
-                                <Tab>Magic Link</Tab>
+                                
                             </TabList>
                             <TabPanels>
                                 {/* initially mounted */}
@@ -186,7 +186,7 @@ const Signin = () => {
                                     <Stack spacing="6">
                                         <Stack spacing="5">
                                             <FormControl isInvalid={!!errors.email}>
-                                                <FormLabel htmlFor="email">Email</FormLabel>
+                                                <FormLabel htmlFor="email">E-mail</FormLabel>
                                                 <Input
                                                     id="email"
                                                     placeholder="Email"
@@ -199,7 +199,7 @@ const Signin = () => {
                                                 </FormErrorMessage>
                                             </FormControl>
                                             <FormControl isInvalid={!!errors.password}>
-                                                <FormLabel htmlFor="password">Password</FormLabel>
+                                                <FormLabel htmlFor="password">Senha</FormLabel>
                                                 <InputGroup>
                                                     <InputRightElement>
                                                         <IconButton
@@ -231,16 +231,16 @@ const Signin = () => {
                                                 isLoading={!authButtonState ? signUp.isLoading : signIn.isLoading}
                                                 colorScheme="blue" isDisabled={!isValid}
                                             >
-                                                {!authButtonState ? (signUp.isLoading || 'Register') : (signIn.isLoading || 'Sign in')}
+                                                {!authButtonState ? (signUp.isLoading || 'Register') : (signIn.isLoading || 'Entrar')}
                                             </Button>
-                                            <HStack>
+                                           {/*  <HStack>
                                                 <Divider />
                                                 <Text fontSize="sm" whiteSpace="nowrap" color="muted">
                                                     or continue with
                                                 </Text>
                                                 <Divider />
                                             </HStack>
-                                            <OAuthButtonGroup childToParent={handleCallBack} />
+                                            <OAuthButtonGroup childToParent={handleCallBack} /> */}
                                         </Stack>
                                     </Stack>
                                 </TabPanel>

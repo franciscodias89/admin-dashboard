@@ -16,15 +16,15 @@ function UserSearch() {
   return (
     <Search onQueryChange={(value) => setQuery(value)} query={query}>
       <SearchTrigger />
-      <SearchResults isLoading={isLoading} placeholder="Search the users">
-        {data?.map((user) => (
+      <SearchResults isLoading={isLoading} placeholder="Pesquisar">
+       {/*  {data?.map((user) => (
           <Link key={user.id} to={`/admin/users/${user.id}`}>
             <SearchResultsItem
               description={user.email}
               title={`${user.firstName} ${user.lastName}`}
             />
           </Link>
-        ))}
+        ))} */}
         {data?.length === 0 && <SearchEmpty />}
       </SearchResults>
     </Search>

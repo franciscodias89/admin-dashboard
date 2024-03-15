@@ -72,7 +72,7 @@ function Footer() {
       <Divider />
       <Box pt="8" pb="12" textAlign="center">
         <Text color="muted">
-          © 2023 DevConnector. All rights reserved.
+          © 2023 DataleadsB2B. All rights reserved.
         </Text>
       </Box>
     </Box>

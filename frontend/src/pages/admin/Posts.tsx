@@ -12,6 +12,7 @@ import { useRemovePost } from "../../hooks/post/useRemovePost";
 import { useAuth } from "../../providers/AuthProvider";
 import { useProfile } from "../../hooks/auth/useProfile";
 import { usePostByProfileId } from "../../hooks/post/usePostByProfile";
+import  Metabase  from "../../components/Metabase";
 
 const pageSize = 5;
 
@@ -78,66 +79,14 @@ const Posts = () => {
   }
 
   return (
+
     <Page animation="slideFade">
-      <Toolbar>
-        <ToolbarTitle>Posts</ToolbarTitle>
-        <ToolbarActions>
-          <Button as={Link} colorScheme='blue' to="/admin/posts/new">
-            Add Post
-          </Button>
-        </ToolbarActions>
-      </Toolbar>
-      <Card mt="8">
-        <CardHeader>
-          <Text>Posts table</Text>
-        </CardHeader>
-        <CardBody>
-          <PostTable
-            onDelete={(post) => handleOpenRemoveAlert(post)}
-            posts={posts}
-          />
-        </CardBody>
-        <CardFooter>
-          <Pagination
-            onPageChange={handlePageChange}
-            pageIndex={pageIndex}
-            pageSize={pageSize}
-            total={data?.length!}
-          />
-        </CardFooter>
-      </Card>
-      <AlertDialog
-        isOpen={isOpen}
-        leastDestructiveRef={cancelRef}
-        onClose={handleCloseRemoveAlert}
-      >
-        <AlertDialogOverlay>
-          <AlertDialogContent>
-            <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Delete Post
-            </AlertDialogHeader>
-
-            <AlertDialogBody>
-              Are you sure? You can't undo this action afterwards.
-            </AlertDialogBody>
-
-            <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={handleCloseRemoveAlert}>
-                Cancel
-              </Button>
-              <Button
-                colorScheme="red"
-                isLoading={removePost.isLoading}
-                onClick={() => handleRemovePost(activePost!)}
-                ml={3}
-              >
-                Delete
-              </Button>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialogOverlay>
-      </AlertDialog>
+<span>Something went wrong! If the problem persists, contact us!</span>
+     <Metabase></Metabase> 
     </Page>
+    
+    
+    
   )
 }
 

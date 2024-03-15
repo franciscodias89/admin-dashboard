@@ -66,7 +66,7 @@ const Nav = () => {
       >
         <c.HStack spacing={8} display={{ base: "none", md: "flex" }}>
           <Link to="/">
-            DevConnector 🚀
+            DataleadsB2B 🚀
           </Link>
           <Link to="/posts">Posts</Link>
           <Link to="/developers">Developers</Link>

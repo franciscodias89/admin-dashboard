@@ -30,7 +30,7 @@ export const App = () => {
         <CookieBanner />
         <AuthProvider>
           <Routes>
-            <Route path="/" element={<LandingLayout />}>
+            <Route path="/" element={<Signin />}>
               <Route index element={<Home />} />
               {/* <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} /> */}
@@ -50,14 +50,14 @@ export const App = () => {
                 </RequireAuth>
               }
             >
-              <Route index element={<Dashboard />} />
+              {/* <Route index element={<Dashboard />} />
               <Route path="/admin/profile" element={<Profile />} />
               <Route path="/admin/users" element={<Users />} />
               <Route path="/admin/users/new" element={<User />} />
-              <Route path="/admin/users/:id" element={<User />} />
-              <Route path="/admin/posts" element={<Posts />} />
-              <Route path="/admin/posts/new" element={<Post />} />
-              <Route path="/admin/posts/:id" element={<Post />} />
+              <Route path="/admin/users/:id" element={<User />} /> */}
+              <Route path="/admin/database" element={<Posts />} />
+              {/* <Route path="/admin/posts/new" element={<Post />} />
+              <Route path="/admin/posts/:id" element={<Post />} /> */}
               {/* <Route path="/admin/websocket" element={<WebSocket />} /> */}
             </Route>
           </Routes>
