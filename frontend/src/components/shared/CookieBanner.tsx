@@ -32,16 +32,15 @@ function CookieBanner() {
               <Icon as={InfoOutlineIcon} boxSize="6" />
             </BannerAvatar>
             <Text>
-              We use third-party cookies to deliver our services, to personalize
-              ads, and to analyze traffic.{" "}
+              Nós utilizamos cookies para melhor oferecer nossos serviços..{" "}
               <Link as={RouterLink} fontWeight="bold" to="/privacy">
-                Read our Cookie Policy.
+                Leia nossas políticas.
               </Link>
             </Text>
           </BannerBody>
           <BannerActions>
             <Button colorScheme="blue" onClick={handleConsent}>
-              I agree
+              Eu Concordo
             </Button>
           </BannerActions>
         </Banner>
