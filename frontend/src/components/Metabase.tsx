@@ -31,7 +31,7 @@ class Metabase extends Component {
 		//const mbSecretKey = "64a91776f4fd0bcca5338e3519be515adef7d5cb1d3582f3befa398abe9e248d"
 	
 		//const token = jose.SignJWT(payload, mbSecretKey) //jwt.sign(payload, METABASE_SECRET_KEY);
-    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTE5OTIwMTEsInJlc291cmNlIjp7ImRhc2hib2FyZCI6MX0sInBhcmFtcyI6e319.PgD1_gf8EDjtdoNvlnAN7JCXD7kwtH5tO25ftT-toWw";
+    const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTQ1MjEyNTEsInJlc291cmNlIjp7ImRhc2hib2FyZCI6MX0sInBhcmFtcyI6e319.zQLhRr0jvLYye9dcDwx0GOcv5giYWWBrlQXOjHhp9NE";
 		const iframeUrl = mbSiteUrl+"/embed/dashboard/" + token + "#bordered=true&titled=true";
 
 
